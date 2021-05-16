@@ -7,18 +7,18 @@ A simple VST 3 trance gate plug-in.
 Execute the following commands on cli.
 
 ```
-git clone https://www.github.com/hansen-audio/renegate.git
+git clone https://www.github.com/hansen-audio/renegate-fx.git
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Debug ../renegate
+cmake -DCMAKE_BUILD_TYPE=Debug ../renegate-fx
 cmake --build .
 ```
 
-> Linux: ```cmake -DCMAKE_BUILD_TYPE=[Debug|Release] ../renegate```
+> Linux: ```cmake -DCMAKE_BUILD_TYPE=[Debug|Release] ../renegate-fx```
 
-> macOS:```cmake -GXcode ../renegate```
+> macOS:```cmake -GXcode ../renegate-fx```
 
-> Windows 10: ```cmake -G"Visual Studio 16 2019" -A x64 ..\renegate```
+> Windows 10: ```cmake -G"Visual Studio 16 2019" -A x64 ..\renegate-fx```
 
 ## License
 
