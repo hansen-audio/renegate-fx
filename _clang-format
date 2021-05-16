@@ -12,8 +12,7 @@ AllowShortLoopsOnASingleLine                        : false
 AlwaysBreakTemplateDeclarations                     : true
 BinPackParameters                                   : false
 BreakConstructorInitializersBeforeComma             : true
-ColumnLimit                                         : 100
-#ColumnLimit                                        : 127
+ColumnLimit                                         : 80
 ConstructorInitializerAllOnOneLineOrOnePerLine      : false
 ConstructorInitializerIndentWidth                   : 0
 Cpp11BracedListStyle                                : true
