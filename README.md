@@ -1,6 +1,6 @@
-# Renegate Effect Plug-in
+# ReneGate Effect Plug-in
 
-A simple VST 3 plug-in.
+A simple VST 3 trance gate plug-in.
 
 ## Building the project
 
