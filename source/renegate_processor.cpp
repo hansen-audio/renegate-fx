@@ -47,7 +47,8 @@ tresult PLUGIN_API renegateProcessor::initialize(FUnknown* context)
     addAudioInput(STR16("Stereo In"), Vst::SpeakerArr::kStereo);
     addAudioOutput(STR16("Stereo Out"), Vst::SpeakerArr::kStereo);
 
-    plugin_base::common::setup_context(component_context, Config::ENTITY_COMPONENT_DEF,
+    plugin_base::common::setup_context(component_context,
+                                       Config::ENTITY_COMPONENT_DEF,
                                        Config::COMPONENT_TREE_DEF);
 
     return kResultOk;
@@ -56,7 +57,8 @@ tresult PLUGIN_API renegateProcessor::initialize(FUnknown* context)
 //------------------------------------------------------------------------
 tresult PLUGIN_API renegateProcessor::terminate()
 {
-    // Here the Plug-in will be de-instanciated, last possibility to remove some memory!
+    // Here the Plug-in will be de-instanciated, last possibility to remove some
+    // memory!
 
     //---do not forget to call parent ------
     return AudioEffect::terminate();
@@ -82,9 +84,11 @@ tresult PLUGIN_API renegateProcessor::process(Vst::ProcessData& data)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::setupProcessing(Vst::ProcessSetup& newSetup)
+tresult PLUGIN_API
+renegateProcessor::setupProcessing(Vst::ProcessSetup& newSetup)
 {
-    bool bRes = plugin_base::vst3::setup_processing(component_context, newSetup, this);
+    bool bRes =
+        plugin_base::vst3::setup_processing(component_context, newSetup, this);
     if (!bRes)
         return kResultFalse;
 
@@ -93,7 +97,8 @@ tresult PLUGIN_API renegateProcessor::setupProcessing(Vst::ProcessSetup& newSetu
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::canProcessSampleSize(int32 symbolicSampleSize)
+tresult PLUGIN_API
+renegateProcessor::canProcessSampleSize(int32 symbolicSampleSize)
 {
     // by default kSample32 is supported
     if (symbolicSampleSize == Vst::kSample32)

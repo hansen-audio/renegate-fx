@@ -29,7 +29,8 @@ tresult PLUGIN_API renegateController::initialize(FUnknown* context)
 
     // Here you could register some parameters
     plugin_base::vst3::GenericParam::createParameters(
-        Config::ENTITY_COMPONENT_DEF, [&](plugin_base::vst3::GenericParam* param) {
+        Config::ENTITY_COMPONENT_DEF,
+        [&](plugin_base::vst3::GenericParam* param) {
             parameters.addParameter(param); // takes ownership
             return true;
         });
@@ -40,7 +41,8 @@ tresult PLUGIN_API renegateController::initialize(FUnknown* context)
 //------------------------------------------------------------------------
 tresult PLUGIN_API renegateController::terminate()
 {
-    // Here the Plug-in will be de-instanciated, last possibility to remove some memory!
+    // Here the Plug-in will be de-instanciated, last possibility to remove some
+    // memory!
 
     //---do not forget to call parent ------
     return EditControllerEx1::terminate();
@@ -80,14 +82,16 @@ IPlugView* PLUGIN_API renegateController::createView(FIDString name)
     if (FIDStringsEqual(name, Vst::ViewType::kEditor))
     {
         // create your editor here and return a IPlugView ptr of it
-        auto* view = new VSTGUI::VST3Editor(this, "view", "renegate_editor.uidesc");
+        auto* view =
+            new VSTGUI::VST3Editor(this, "view", "renegate_editor.uidesc");
         return view;
     }
     return nullptr;
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::setParamNormalized(Vst::ParamID tag, Vst::ParamValue value)
+tresult PLUGIN_API renegateController::setParamNormalized(Vst::ParamID tag,
+                                                          Vst::ParamValue value)
 {
     // called by host to update your parameters
     tresult result = EditControllerEx1::setParamNormalized(tag, value);
@@ -95,23 +99,23 @@ tresult PLUGIN_API renegateController::setParamNormalized(Vst::ParamID tag, Vst:
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::getParamStringByValue(Vst::ParamID tag,
-                                                             Vst::ParamValue valueNormalized,
-                                                             Vst::String128 string)
+tresult PLUGIN_API renegateController::getParamStringByValue(
+    Vst::ParamID tag, Vst::ParamValue valueNormalized, Vst::String128 string)
 {
-    // called by host to get a string for given normalized value of a specific parameter
-    // (without having to set the value!)
-    return EditControllerEx1::getParamStringByValue(tag, valueNormalized, string);
+    // called by host to get a string for given normalized value of a specific
+    // parameter (without having to set the value!)
+    return EditControllerEx1::getParamStringByValue(tag, valueNormalized,
+                                                    string);
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::getParamValueByString(Vst::ParamID tag,
-                                                             Vst::TChar* string,
-                                                             Vst::ParamValue& valueNormalized)
+tresult PLUGIN_API renegateController::getParamValueByString(
+    Vst::ParamID tag, Vst::TChar* string, Vst::ParamValue& valueNormalized)
 {
-    // called by host to get a normalized value from a string representation of a specific parameter
-    // (without having to set the value!)
-    return EditControllerEx1::getParamValueByString(tag, string, valueNormalized);
+    // called by host to get a normalized value from a string representation of
+    // a specific parameter (without having to set the value!)
+    return EditControllerEx1::getParamValueByString(tag, string,
+                                                    valueNormalized);
 }
 
 //------------------------------------------------------------------------
