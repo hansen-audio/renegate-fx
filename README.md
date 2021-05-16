@@ -1,5 +1,4 @@
 # Renegate Effect Plug-in
-[![Linux Build](https://github.com/hansen-audio/gain-automator/actions/workflows/cmake_linux.yml/badge.svg)](https://github.com/hansen-audio/gain-automator/actions/workflows/cmake_linux.yml) [![macOS Build](https://github.com/hansen-audio/gain-automator/actions/workflows/cmake_macos.yml/badge.svg)](https://github.com/hansen-audio/gain-automator/actions/workflows/cmake_macos.yml)
 
 A simple VST 3 plug-in.
 
@@ -16,7 +15,9 @@ cmake --build .
 ```
 
 > Linux: ```cmake -DCMAKE_BUILD_TYPE=[Debug|Release] ../renegate```
+
 > macOS:```cmake -GXcode ../renegate```
+
 > Windows 10: ```cmake -G"Visual Studio 16 2019" -A x64 ..\renegate```
 
 ## License
