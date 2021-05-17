@@ -1,5 +1,9 @@
 # ReneGate Effect Plug-in
 
+[![CMake (Linux, macOS, Windows)](https://github.com/hansen-audio/renegate-fx/actions/workflows/cmake.yml/badge.svg)](https://github.com/hansen-audio/renegate-fx/actions/workflows/cmake.yml)
+
+## Summary
+
 A simple VST 3 trance gate plug-in.
 
 ## Building the project
