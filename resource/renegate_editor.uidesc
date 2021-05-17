@@ -162,7 +162,7 @@
 				"width": "1"
 			},
 			"VST3Editor": {
-				"Path": "/home/rene/Developer/gitea/hansen-audio/renegate/resource/renegate_editor.uidesc"
+				"Path": "/home/rene/Developer/gitea/hansen-audio/renegate-fx/resource/renegate_editor.uidesc"
 			},
 			"UIGridController": {
 				"Grids": "1x 1,4x 4,5x 5,8x 8,10x 10,12x 12,15x 15",
@@ -172,7 +172,7 @@
 				"SelectedTemplate": "view"
 			},
 			"UIEditController": {
-				"EditViewScale": "1",
+				"EditViewScale": "2",
 				"EditorSize": "0, 0, 1547, 850",
 				"SplitViewSize_0_0": "0.5837378640776699212366906976967584341764",
 				"SplitViewSize_0_1": "0.3919902912621359147848920656542759388685",
@@ -1264,10 +1264,10 @@
 									"min-value": "0",
 									"mouse-enabled": "true",
 									"opacity": "1",
-									"origin": "68, 14",
+									"origin": "66, 14",
 									"round-rect-radius": "2",
 									"shadow-color": "~ RedCColor",
-									"size": "644, 128",
+									"size": "646, 128",
 									"style-3D-in": "false",
 									"style-3D-out": "false",
 									"style-no-draw": "true",
@@ -1295,8 +1295,8 @@
 									"class": "UIViewSwitchContainer",
 									"mouse-enabled": "true",
 									"opacity": "1",
-									"origin": "72, 18",
-									"size": "636, 104",
+									"origin": "70, 18",
+									"size": "640, 104",
 									"template-names": "Mono Pattern,Stereo Pattern",
 									"template-switch-control": "Mode",
 									"transparent": "true",
@@ -1382,7 +1382,7 @@
 									"min-value": "1",
 									"mouse-enabled": "true",
 									"opacity": "1",
-									"origin": "70, 125",
+									"origin": "69, 125",
 									"round-radius": "2",
 									"segment-names": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
 									"selection-mode": "Single",
