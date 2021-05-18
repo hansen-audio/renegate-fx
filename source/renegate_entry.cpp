@@ -9,7 +9,7 @@
 
 #include "public.sdk/source/main/pluginfactory.h"
 
-#define stringPluginName "Renegate"
+#define stringPluginName "ReneGate"
 
 using namespace Steinberg::Vst;
 using namespace ha;
@@ -33,9 +33,9 @@ DEF_CLASS2(
     kVstAudioEffectClass,       // the component category (do not changed this)
     stringPluginName,           // here the Plug-in name (to be changed)
     Vst::kDistributable,        // means that component and controller could be
-                         // distributed on different computers
-    renegateVST3Category, // Subcategory for this Plug-in (to be changed)
-    FULL_VERSION_STR,     // Plug-in version (to be changed)
+                                // distributed on different computers
+    renegateVST3Category,       // Subcategory for this Plug-in (to be changed)
+    FULL_VERSION_STR,           // Plug-in version (to be changed)
     kVstVersionString, // the VST 3 SDK version (do not changed this, use always
                        // this define)
     renegateProcessor::createInstance) // function pointer called when this
@@ -58,7 +58,7 @@ DEF_CLASS2(
                                         // component should be instantiated
 
 //----for others Plug-ins contained in this factory, put like for the first
-//Plug-in different
+// Plug-in different
 // DEF_CLASS2---
 
 END_FACTORY
