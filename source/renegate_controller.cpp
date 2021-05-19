@@ -14,9 +14,9 @@ using namespace Steinberg;
 namespace ha {
 
 //------------------------------------------------------------------------
-// renegateController Implementation
+// RenegateController Implementation
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::initialize(FUnknown* context)
+tresult PLUGIN_API RenegateController::initialize(FUnknown* context)
 {
     // Here the Plug-in will be instanciated
 
@@ -39,7 +39,7 @@ tresult PLUGIN_API renegateController::initialize(FUnknown* context)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::terminate()
+tresult PLUGIN_API RenegateController::terminate()
 {
     // Here the Plug-in will be de-instanciated, last possibility to remove some
     // memory!
@@ -49,7 +49,7 @@ tresult PLUGIN_API renegateController::terminate()
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::setComponentState(IBStream* state)
+tresult PLUGIN_API RenegateController::setComponentState(IBStream* state)
 {
     // Here you get the state of the component (Processor part)
     if (!state)
@@ -59,7 +59,7 @@ tresult PLUGIN_API renegateController::setComponentState(IBStream* state)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::setState(IBStream* state)
+tresult PLUGIN_API RenegateController::setState(IBStream* state)
 {
     // Here you get the state of the controller
 
@@ -67,7 +67,7 @@ tresult PLUGIN_API renegateController::setState(IBStream* state)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::getState(IBStream* state)
+tresult PLUGIN_API RenegateController::getState(IBStream* state)
 {
     // Here you are asked to deliver the state of the controller (if needed)
     // Note: the real state of your plug-in is saved in the processor
@@ -76,7 +76,7 @@ tresult PLUGIN_API renegateController::getState(IBStream* state)
 }
 
 //------------------------------------------------------------------------
-IPlugView* PLUGIN_API renegateController::createView(FIDString name)
+IPlugView* PLUGIN_API RenegateController::createView(FIDString name)
 {
     // Here the Host wants to open your editor (if you have one)
     if (FIDStringsEqual(name, Vst::ViewType::kEditor))
@@ -90,7 +90,7 @@ IPlugView* PLUGIN_API renegateController::createView(FIDString name)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::setParamNormalized(Vst::ParamID tag,
+tresult PLUGIN_API RenegateController::setParamNormalized(Vst::ParamID tag,
                                                           Vst::ParamValue value)
 {
     // called by host to update your parameters
@@ -99,7 +99,7 @@ tresult PLUGIN_API renegateController::setParamNormalized(Vst::ParamID tag,
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::getParamStringByValue(
+tresult PLUGIN_API RenegateController::getParamStringByValue(
     Vst::ParamID tag, Vst::ParamValue valueNormalized, Vst::String128 string)
 {
     // called by host to get a string for given normalized value of a specific
@@ -109,7 +109,7 @@ tresult PLUGIN_API renegateController::getParamStringByValue(
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateController::getParamValueByString(
+tresult PLUGIN_API RenegateController::getParamValueByString(
     Vst::ParamID tag, Vst::TChar* string, Vst::ParamValue& valueNormalized)
 {
     // called by host to get a normalized value from a string representation of

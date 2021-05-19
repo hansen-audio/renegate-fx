@@ -38,7 +38,7 @@ DEF_CLASS2(
     FULL_VERSION_STR,           // Plug-in version (to be changed)
     kVstVersionString, // the VST 3 SDK version (do not changed this, use always
                        // this define)
-    renegateProcessor::createInstance) // function pointer called when this
+    RenegateProcessor::createInstance) // function pointer called when this
                                        // component should be instantiated
 
 // its kVstComponentControllerClass component
@@ -54,7 +54,7 @@ DEF_CLASS2(
     FULL_VERSION_STR, // Plug-in version (to be changed)
     kVstVersionString, // the VST 3 SDK version (do not changed this, use always
                        // this define)
-    renegateController::createInstance) // function pointer called when this
+    RenegateController::createInstance) // function pointer called when this
                                         // component should be instantiated
 
 //----for others Plug-ins contained in this factory, put like for the first

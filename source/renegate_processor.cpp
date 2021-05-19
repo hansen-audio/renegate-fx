@@ -19,19 +19,19 @@ using namespace Steinberg;
 namespace ha {
 
 //------------------------------------------------------------------------
-// renegateProcessor
+// RenegateProcessor
 //------------------------------------------------------------------------
-renegateProcessor::renegateProcessor()
+RenegateProcessor::RenegateProcessor()
 {
     //--- set the wanted controller for our processor
     setControllerClass(kRenegateControllerUID);
 }
 
 //------------------------------------------------------------------------
-renegateProcessor::~renegateProcessor() {}
+RenegateProcessor::~RenegateProcessor() {}
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::initialize(FUnknown* context)
+tresult PLUGIN_API RenegateProcessor::initialize(FUnknown* context)
 {
     // Here the Plug-in will be instanciated
 
@@ -55,7 +55,7 @@ tresult PLUGIN_API renegateProcessor::initialize(FUnknown* context)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::terminate()
+tresult PLUGIN_API RenegateProcessor::terminate()
 {
     // Here the Plug-in will be de-instanciated, last possibility to remove some
     // memory!
@@ -65,14 +65,14 @@ tresult PLUGIN_API renegateProcessor::terminate()
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::setActive(TBool state)
+tresult PLUGIN_API RenegateProcessor::setActive(TBool state)
 {
     //--- called when the Plug-in is enable/disable (On/Off) -----
     return AudioEffect::setActive(state);
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::process(Vst::ProcessData& data)
+tresult PLUGIN_API RenegateProcessor::process(Vst::ProcessData& data)
 {
     //--- First : Read inputs parameter changes-----------
 
@@ -85,7 +85,7 @@ tresult PLUGIN_API renegateProcessor::process(Vst::ProcessData& data)
 
 //------------------------------------------------------------------------
 tresult PLUGIN_API
-renegateProcessor::setupProcessing(Vst::ProcessSetup& newSetup)
+RenegateProcessor::setupProcessing(Vst::ProcessSetup& newSetup)
 {
     bool bRes =
         plugin_base::vst3::setup_processing(component_context, newSetup, this);
@@ -98,7 +98,7 @@ renegateProcessor::setupProcessing(Vst::ProcessSetup& newSetup)
 
 //------------------------------------------------------------------------
 tresult PLUGIN_API
-renegateProcessor::canProcessSampleSize(int32 symbolicSampleSize)
+RenegateProcessor::canProcessSampleSize(int32 symbolicSampleSize)
 {
     // by default kSample32 is supported
     if (symbolicSampleSize == Vst::kSample32)
@@ -112,7 +112,7 @@ renegateProcessor::canProcessSampleSize(int32 symbolicSampleSize)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::setState(IBStream* state)
+tresult PLUGIN_API RenegateProcessor::setState(IBStream* state)
 {
     // called when we load a preset, the model has to be reloaded
     IBStreamer streamer(state, kLittleEndian);
@@ -121,7 +121,7 @@ tresult PLUGIN_API renegateProcessor::setState(IBStream* state)
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API renegateProcessor::getState(IBStream* state)
+tresult PLUGIN_API RenegateProcessor::getState(IBStream* state)
 {
     // here we need to save the model
     IBStreamer streamer(state, kLittleEndian);

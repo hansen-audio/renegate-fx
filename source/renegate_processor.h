@@ -10,18 +10,18 @@
 namespace ha {
 
 //------------------------------------------------------------------------
-//  renegateProcessor
+//  RenegateProcessor
 //------------------------------------------------------------------------
-class renegateProcessor : public Steinberg::Vst::AudioEffect
+class RenegateProcessor : public Steinberg::Vst::AudioEffect
 {
 public:
-    renegateProcessor();
-    ~renegateProcessor() SMTG_OVERRIDE;
+    RenegateProcessor();
+    ~RenegateProcessor() SMTG_OVERRIDE;
 
     // Create function
     static Steinberg::FUnknown* createInstance(void* /*context*/)
     {
-        return (Steinberg::Vst::IAudioProcessor*)new renegateProcessor;
+        return (Steinberg::Vst::IAudioProcessor*)new RenegateProcessor;
     }
 
     //--- ---------------------------------------------------------------------

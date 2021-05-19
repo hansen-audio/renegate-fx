@@ -9,19 +9,19 @@
 namespace ha {
 
 //------------------------------------------------------------------------
-//  renegateController
+//  RenegateController
 //------------------------------------------------------------------------
-class renegateController : public Steinberg::Vst::EditControllerEx1
+class RenegateController : public Steinberg::Vst::EditControllerEx1
 {
 public:
     //------------------------------------------------------------------------
-    renegateController()                = default;
-    ~renegateController() SMTG_OVERRIDE = default;
+    RenegateController()                = default;
+    ~RenegateController() SMTG_OVERRIDE = default;
 
     // Create function
     static Steinberg::FUnknown* createInstance(void* /*context*/)
     {
-        return (Steinberg::Vst::IEditController*)new renegateController;
+        return (Steinberg::Vst::IEditController*)new RenegateController;
     }
 
     // IPluginBase
