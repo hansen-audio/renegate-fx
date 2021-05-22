@@ -121,6 +121,7 @@
 			"StepL30": "65565",
 			"StepL31": "65566",
 			"StepL32": "65567",
+			"StepPosition": "65609",
 			"StepR01": "65568",
 			"StepR02": "65569",
 			"StepR03": "65570",
@@ -180,12 +181,12 @@
 				"SplitViewSize_1_1": "0.5968992248062015004705926912720315158367",
 				"SplitViewSize_2_0": "0.6844349680170576100124435470206663012505",
 				"SplitViewSize_2_1": "0.3120113717128642494280654773319838568568",
-				"TabSwitchValue": "2",
+				"TabSwitchValue": "0",
 				"Version": "1"
 			},
 			"UIAttributesController": {},
 			"UIViewCreatorDataSource": {
-				"SelectedRow": "20"
+				"SelectedRow": "15"
 			},
 			"UIColorsDataSource": {
 				"SelectedRow": "4"
@@ -1302,6 +1303,23 @@
 									"transparent": "true",
 									"uidesc-label": "Pattern",
 									"wants-focus": "false"
+								},
+								"children": {
+									"CViewContainer": {
+										"attributes": {
+											"background-color": "HTML black",
+											"background-color-draw-style": "filled and stroked",
+											"class": "CViewContainer",
+											"mouse-enabled": "true",
+											"opacity": "1",
+											"origin": "0, 0",
+											"size": "640, 104",
+											"template": "Mono Pattern",
+											"transparent": "true",
+											"uidesc-label": "Mono Pattern",
+											"wants-focus": "false"
+										}
+									}
 								}
 							},
 							"CSegmentButton": {
@@ -1376,6 +1394,44 @@
 									"text-color-highlighted": "Label Color",
 									"transparent": "false",
 									"wants-focus": "true",
+									"wheel-inc-value": "0.1"
+								}
+							},
+							"CParamDisplay": {
+								"attributes": {
+									"back-color": "~ TransparentCColor",
+									"background-offset": "0, 0",
+									"class": "CParamDisplay",
+									"control-tag": "StepPosition",
+									"default-value": "1",
+									"font": "~ NormalFontBig",
+									"font-antialias": "true",
+									"font-color": "Font value color",
+									"frame-color": "HTML black",
+									"frame-width": "1",
+									"max-value": "32",
+									"min-value": "1",
+									"mouse-enabled": "false",
+									"opacity": "1",
+									"origin": "44, 123",
+									"round-rect-radius": "6",
+									"shadow-color": "~ RedCColor",
+									"size": "20, 16",
+									"style-3D-in": "false",
+									"style-3D-out": "false",
+									"style-no-draw": "false",
+									"style-no-frame": "true",
+									"style-no-text": "false",
+									"style-round-rect": "false",
+									"style-shadow-text": "false",
+									"text-alignment": "right",
+									"text-inset": "0, 0",
+									"text-rotation": "0",
+									"text-shadow-offset": "1, 1",
+									"transparent": "false",
+									"uidesc-label": "StepPosition",
+									"value-precision": "2",
+									"wants-focus": "false",
 									"wheel-inc-value": "0.1"
 								}
 							}
