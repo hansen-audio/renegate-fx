@@ -69,6 +69,16 @@
 					"start": "1"
 				}
 			],
+			"Step Position Highlighted": [
+				{
+					"rgba": "#b06b6440",
+					"start": "0"
+				},
+				{
+					"rgba": "#b06b6440",
+					"start": "1"
+				}
+			],
 			"Stereo": [
 				{
 					"rgba": "#ffffff00",
@@ -170,29 +180,29 @@
 				"Size": "4, 4"
 			},
 			"UITemplateController": {
-				"SelectedTemplate": "view"
+				"SelectedTemplate": "Stereo Pattern"
 			},
 			"UIEditController": {
-				"EditViewScale": "1",
-				"EditorSize": "0, 0, 1407, 800",
-				"SplitViewSize_0_0": "0.5568475452196381958458459848770871758461",
-				"SplitViewSize_0_1": "0.4173126614987079929797175736894132569432",
-				"SplitViewSize_1_0": "0.4031007751937984440182560774701414629817",
-				"SplitViewSize_1_1": "0.5968992248062015004705926912720315158367",
-				"SplitViewSize_2_0": "0.6844349680170576100124435470206663012505",
-				"SplitViewSize_2_1": "0.3120113717128642494280654773319838568568",
+				"EditViewScale": "2.5",
+				"EditorSize": "0, 0, 1746, 965",
+				"SplitViewSize_0_0": "0.6347177848775292785532542438886594027281",
+				"SplitViewSize_0_1": "0.3439829605963791170353260895353741943836",
+				"SplitViewSize_1_0": "0.4206602768903088263030554116994608193636",
+				"SplitViewSize_1_1": "0.5804046858359956928552492172457277774811",
+				"SplitViewSize_2_0": "0.7457044673539519052951618505176156759262",
+				"SplitViewSize_2_1": "0.2514318442153493649016127164941281080246",
 				"TabSwitchValue": "0",
 				"Version": "1"
 			},
 			"UIAttributesController": {},
 			"UIViewCreatorDataSource": {
-				"SelectedRow": "15"
+				"SelectedRow": "20"
 			},
 			"UIColorsDataSource": {
-				"SelectedRow": "4"
+				"SelectedRow": "7"
 			},
 			"UIGradientsDataSource": {
-				"SelectedRow": "3"
+				"SelectedRow": "4"
 			},
 			"UIBitmapsDataSource": {
 				"SelectedRow": "-1"
@@ -1194,7 +1204,7 @@
 										"attributes": {
 											"class": "CTextButton",
 											"control-tag": "Mode",
-											"default-value": "1",
+											"default-value": "0",
 											"font": "~ SystemFont",
 											"frame-color": "Fader Background",
 											"frame-color-highlighted": "Fader",
@@ -1223,7 +1233,7 @@
 										"attributes": {
 											"class": "CTextButton",
 											"control-tag": "Mode",
-											"default-value": "1",
+											"default-value": "0",
 											"font": "~ SystemFont",
 											"frame-color": "Fader",
 											"frame-color-highlighted": "Fader",
@@ -1303,30 +1313,13 @@
 									"transparent": "true",
 									"uidesc-label": "Pattern",
 									"wants-focus": "false"
-								},
-								"children": {
-									"CViewContainer": {
-										"attributes": {
-											"background-color": "HTML black",
-											"background-color-draw-style": "filled and stroked",
-											"class": "CViewContainer",
-											"mouse-enabled": "true",
-											"opacity": "1",
-											"origin": "0, 0",
-											"size": "640, 104",
-											"template": "Mono Pattern",
-											"transparent": "true",
-											"uidesc-label": "Mono Pattern",
-											"wants-focus": "false"
-										}
-									}
 								}
 							},
 							"CSegmentButton": {
 								"attributes": {
 									"class": "CSegmentButton",
 									"control-tag": "Mode",
-									"default-value": "1",
+									"default-value": "0",
 									"font": "~ NormalFontVeryBig",
 									"frame-color": "~ TransparentCColor",
 									"frame-width": "2",
@@ -1412,7 +1405,7 @@
 									"max-value": "32",
 									"min-value": "1",
 									"mouse-enabled": "false",
-									"opacity": "1",
+									"opacity": "0",
 									"origin": "44, 123",
 									"round-rect-radius": "6",
 									"shadow-color": "~ RedCColor",
@@ -1429,7 +1422,7 @@
 									"text-rotation": "0",
 									"text-shadow-offset": "1, 1",
 									"transparent": "false",
-									"uidesc-label": "StepPosition",
+									"uidesc-label": "Dummy Step Position Indicator",
 									"value-precision": "2",
 									"wants-focus": "false",
 									"wheel-inc-value": "0.1"
@@ -1487,7 +1480,7 @@
 					"mouse-enabled": "true",
 					"opacity": "1",
 					"origin": "0, 0",
-					"size": "640, 104",
+					"size": "638, 104",
 					"transparent": "true",
 					"uidesc-label": "Mono Pattern",
 					"wants-focus": "false"
@@ -2483,6 +2476,35 @@
 							"wants-focus": "true",
 							"wheel-inc-value": "0.1",
 							"zoom-factor": "10"
+						}
+					},
+					"CSegmentButton": {
+						"attributes": {
+							"class": "CSegmentButton",
+							"control-tag": "StepPosition",
+							"default-value": "1",
+							"font": "~ NormalFont",
+							"frame-color": "Background Pattern",
+							"frame-width": "2",
+							"gradient-highlighted": "Step Position Highlighted",
+							"icon-text-margin": "0",
+							"max-value": "32",
+							"min-value": "1",
+							"mouse-enabled": "false",
+							"opacity": "1",
+							"origin": "-1, -2",
+							"round-radius": "0",
+							"segment-names": "1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,9,3,5,6,7,8,9,0,1,2",
+							"selection-mode": "Single",
+							"size": "640, 108",
+							"style": "horizontal",
+							"text-alignment": "center",
+							"text-color": "~ TransparentCColor",
+							"text-color-highlighted": "~ TransparentCColor",
+							"transparent": "false",
+							"uidesc-label": "Mono Step Indicator",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
 						}
 					}
 				}
@@ -4482,6 +4504,64 @@
 							"wants-focus": "true",
 							"wheel-inc-value": "0.1",
 							"zoom-factor": "10"
+						}
+					},
+					"CSegmentButton": {
+						"attributes": {
+							"class": "CSegmentButton",
+							"control-tag": "StepPosition",
+							"default-value": "1",
+							"font": "~ NormalFont",
+							"frame-color": "Background Pattern",
+							"frame-width": "2",
+							"gradient-highlighted": "Step Position Highlighted",
+							"icon-text-margin": "0",
+							"max-value": "32",
+							"min-value": "1",
+							"mouse-enabled": "false",
+							"opacity": "1",
+							"origin": "-1, -2",
+							"round-radius": "0",
+							"segment-names": "1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8",
+							"selection-mode": "Single",
+							"size": "640, 55",
+							"style": "horizontal",
+							"text-alignment": "center",
+							"text-color": "~ TransparentCColor",
+							"text-color-highlighted": "~ TransparentCColor",
+							"transparent": "false",
+							"uidesc-label": "Stereo Step Indicator L",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"CSegmentButton": {
+						"attributes": {
+							"class": "CSegmentButton",
+							"control-tag": "StepPosition",
+							"default-value": "1",
+							"font": "~ NormalFont",
+							"frame-color": "Background Pattern",
+							"frame-width": "2",
+							"gradient-highlighted": "Step Position Highlighted",
+							"icon-text-margin": "0",
+							"max-value": "32",
+							"min-value": "1",
+							"mouse-enabled": "false",
+							"opacity": "1",
+							"origin": "-1, 51",
+							"round-radius": "0",
+							"segment-names": "1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8",
+							"selection-mode": "Single",
+							"size": "640, 55",
+							"style": "horizontal",
+							"text-alignment": "center",
+							"text-color": "~ TransparentCColor",
+							"text-color-highlighted": "~ TransparentCColor",
+							"transparent": "false",
+							"uidesc-label": "Stereo Step Indicator R",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
 						}
 					}
 				}
