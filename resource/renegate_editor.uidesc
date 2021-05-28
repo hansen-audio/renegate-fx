@@ -2501,7 +2501,7 @@
 							"text-alignment": "center",
 							"text-color": "~ TransparentCColor",
 							"text-color-highlighted": "~ TransparentCColor",
-							"transparent": "false",
+							"transparent": "true",
 							"uidesc-label": "Mono Step Indicator",
 							"wants-focus": "false",
 							"wheel-inc-value": "0.1"
@@ -4529,7 +4529,7 @@
 							"text-alignment": "center",
 							"text-color": "~ TransparentCColor",
 							"text-color-highlighted": "~ TransparentCColor",
-							"transparent": "false",
+							"transparent": "true",
 							"uidesc-label": "Stereo Step Indicator L",
 							"wants-focus": "false",
 							"wheel-inc-value": "0.1"
@@ -4558,7 +4558,7 @@
 							"text-alignment": "center",
 							"text-color": "~ TransparentCColor",
 							"text-color-highlighted": "~ TransparentCColor",
-							"transparent": "false",
+							"transparent": "true",
 							"uidesc-label": "Stereo Step Indicator R",
 							"wants-focus": "false",
 							"wheel-inc-value": "0.1"
