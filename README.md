@@ -28,6 +28,4 @@ cmake --build .
 
 Copyright 2021 Hansen Audio
 
-Licensed under the GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
-
 VST 3 and the VST 3 logo are trademarks of Steinberg Media Technologies GmbH.
