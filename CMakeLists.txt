@@ -5,8 +5,6 @@ project(renegate)
 add_subdirectory(external)
 
 smtg_enable_vst3_sdk()
-# Set CMAKE_CXX_STANDARD again as a workaround for VST 3 SDK setting it to 14
-set(CMAKE_CXX_STANDARD 17)
 
 smtg_add_vst3plugin(renegate     
     source/renegate_cids.h
