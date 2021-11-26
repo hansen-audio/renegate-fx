@@ -18,7 +18,7 @@ const plugin_base::parent_child_tree_def Config::COMPONENT_TREE_DEF   = {
 const plugin_base::entity_component_def Config::ENTITY_COMPONENT_DEF = {
     {
         Config::ComponentTags::kTranceGate,
-        audio_modules::module_tags::TRANCE_GATE
+        audio_modules::ModuleTags::TranceGate
     }
 };
 

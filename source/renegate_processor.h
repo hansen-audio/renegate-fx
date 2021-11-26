@@ -59,7 +59,7 @@ public:
     //------------------------------------------------------------------------
 protected:
     plugin_base::common::context component_context;
-    plugin_base::common::audio_busses host_buffers;
+    plugin_base::common::AudioBusses host_buffers;
 };
 
 //------------------------------------------------------------------------
