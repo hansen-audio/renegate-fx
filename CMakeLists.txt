@@ -28,12 +28,18 @@ if(SMTG_ADD_VSTGUI)
         PRIVATE
             vstgui_support
     )
-    smtg_add_vst3_resource(renegate "resource/renegate_editor.uidesc")
+    smtg_target_add_plugin_resources(renegate 
+        RESOURCES
+            "resource/renegate_editor.uidesc"
+    )
 endif()
 # -------------------
 
-smtg_add_vst3_snapshot(renegate resource/EC8C4504FF35529F997829E60F5D8E18_snapshot.png)
-smtg_add_vst3_snapshot(renegate resource/EC8C4504FF35529F997829E60F5D8E18_snapshot_2.0x.png)
+smtg_target_add_plugin_snapshots(renegate
+    RESOURCES
+        resource/EC8C4504FF35529F997829E60F5D8E18_snapshot.png
+        resource/EC8C4504FF35529F997829E60F5D8E18_snapshot_2.0x.png
+)
 
 target_link_libraries(renegate
     PRIVATE
