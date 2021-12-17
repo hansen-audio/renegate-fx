@@ -42,3 +42,9 @@ jobs:
         working-directory: ${{github.workspace}}/build
         shell: bash
         run: ctest --verbose -C ${{env.BUILD_TYPE}}
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: VST3/Release
+          path: VST3/Release
