@@ -46,5 +46,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
-          name: build/VST3/${{env.BUILD_TYPE}}
+          name: build-VST3-${{env.BUILD_TYPE}}
           path: build/VST3/${{env.BUILD_TYPE}}
