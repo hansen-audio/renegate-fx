@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.14.0)
 
-project(renegate)
+project(renegate
+    VERSION 0.9.0
+    DESCRIPTION "VST 3 Trancegate Effect"
+)
   
 add_subdirectory(external)
 
