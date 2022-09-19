@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 
 project(renegate
-    VERSION 0.9.0
+    VERSION 2022.09
     DESCRIPTION "VST 3 Trancegate Effect"
 )
   
