@@ -6,6 +6,8 @@
 
 A VST 3 trance gate plug-in, which is supposed to work in VST 3 Hosts like Steinberg Cubase/Nuendo/WaveLab, Presonus Studio One, reaper etc.
 
+![Renegate](./content/web/renegate_screenshot.png)
+
 ## Prerequisite
 
 This project's algorithms are written in Rust. In order to compile Rust code successfully, Rust needs to be installed.
