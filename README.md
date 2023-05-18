@@ -15,7 +15,7 @@ This project's algorithms are written in Rust. In order to compile Rust code suc
 > Follow instructions from here: https://www.rust-lang.org/tools/install
 
 
-## Building the project
+## Building the Plug-in
 
 Execute the following commands on cli.
 
@@ -33,8 +33,6 @@ cmake --build .
 
 > Windows 10: ```cmake -G"Visual Studio 16 2019" -A x64 ..\renegate-fx```
 
-## License
+## Copyright & Trademark Acknowledgement 
 
-Copyright 2021 Hansen Audio
-
-VST 3 and the VST 3 logo are trademarks of Steinberg Media Technologies GmbH.
+<img src="https://raw.githubusercontent.com/steinbergmedia/vst3_doc/master/artwork/VST_Compatible_Logo_Steinberg_with_TM_negative.png" width="25%" height="25%">
