@@ -21,22 +21,18 @@ smtg_add_vst3plugin(renegate
     source/version.h
 )
 
-#- VSTGUI Wanted ----
-if(SMTG_ADD_VSTGUI)
-	target_sources(renegate
-		PRIVATE
-			resource/renegate_editor.uidesc
-	)
-    target_link_libraries(renegate
-        PRIVATE
-            vstgui_support
-    )
-    smtg_target_add_plugin_resources(renegate 
-        RESOURCES
-            "resource/renegate_editor.uidesc"
-    )
-endif()
-# -------------------
+target_sources(renegate
+    PRIVATE
+        resource/renegate_editor.uidesc
+)
+target_link_libraries(renegate
+    PRIVATE
+        vstgui_support
+)
+smtg_target_add_plugin_resources(renegate 
+    RESOURCES
+        "resource/renegate_editor.uidesc"
+)
 
 smtg_target_add_plugin_snapshots(renegate
     RESOURCES
