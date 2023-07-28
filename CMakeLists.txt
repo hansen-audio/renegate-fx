@@ -74,35 +74,66 @@ elseif(SMTG_WIN)
 	)
 endif()
 
+get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)    
+
+include(CPackComponent)
+set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
+set(CPACK_PACKAGE_VENDOR "Hansen Audio")
+cpack_add_install_type(full DISPLAY_NAME "Full installation")
+
 if(WIN32)
-    get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)
-    install(
-        DIRECTORY "${PLUGIN_PACKAGE_PATH}"
-        # Does not work yet!!! We cannot access Inno's {commoncf64}
-        DESTINATION "../Common Files/VST3"
-        COMPONENT ${PROJECT_NAME}
-    )
+	cpack_add_component(plugin
+		DISPLAY_NAME "VST3 Plugin"
+		INSTALL_TYPES full
+	)
 
+	install(
+		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
+		DESTINATION "VST3"
+		COMPONENT plugin
+	)
+
+	cpack_add_component(presets
+		DISPLAY_NAME "VST3 Presets"
+		INSTALL_TYPES full
+	)
+
+	install(
+		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
+		DESTINATION "${CPACK_PACKAGE_VENDOR}/VST3 Presets"
+		COMPONENT presets
+	)
+	
+	set(CPACK_PACKAGE_INSTALL_DIRECTORY "${CPACK_PACKAGE_VENDOR}/${PROJECT_NAME}")
+	
+	set(CPACK_COMPONENTS_ALL plugin presets)
+	
+	# Inno Setup component specific
+	set(CPACK_INNOSETUP_plugin_INSTALL_DIRECTORY "{commoncf64}")
+	set(CPACK_INNOSETUP_presets_INSTALL_DIRECTORY "{commonappdata}")
+	
+	# Inno Setup global
     set(CPACK_GENERATOR "INNOSETUP")
-    set(CPACK_PACKAGE_VENDOR "Hansen Audio")
-    set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
-    set(CPACK_COMPONENTS_ALL ${PROJECT_NAME})
-    set(CPACK_VERBATIM_VARIABLES YES)
-    include(CPack)
+	set(CPACK_INNOSETUP_SETUP_AppId "{{C6695644-EA21-4EF5-BB3D-94EE2343A47E}}")
+	set(CPACK_INNOSETUP_ALLOW_CUSTOM_DIRECTORY OFF)
+	set(CPACK_INNOSETUP_CODE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/UpdateReadyMemo.pas")
 else()
-    get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)
-    install(
-        DIRECTORY "${PLUGIN_PACKAGE_PATH}"
-        DESTINATION "."
-        COMPONENT ${PROJECT_NAME}
-    )
+	install(
+		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
+		DESTINATION "."
+		COMPONENT plugin
+	)
 
-    string(TOUPPER ${CMAKE_PROJECT_NAME} CMAKE_PROJECT_NAME_UPPER)
-    set(CPACK_ARCHIVE_${CMAKE_PROJECT_NAME_UPPER}_FILE_NAME "${CMAKE_PROJECT_NAME}-${CMAKE_PROJECT_VERSION}-${CMAKE_SYSTEM_NAME}")
+	install(
+		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
+		DESTINATION "VST3 Presets"
+		COMPONENT plugin
+	)
+	
+	set(CPACK_COMPONENTS_ALL plugin)
+    string(TOUPPER plugin plugin_UPPER)
+    set(CPACK_ARCHIVE_${plugin_UPPER}_FILE_NAME "${PROJECT_NAME}-${CMAKE_PROJECT_VERSION}-${CMAKE_SYSTEM_NAME}")
     set(CPACK_GENERATOR "TGZ")
-    set(CPACK_PACKAGE_VENDOR "Hansen Audio")
-    set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
-    set(CPACK_COMPONENTS_ALL ${PROJECT_NAME})
-    set(CPACK_VERBATIM_VARIABLES YES)
-    include(CPack)
-endif()
+endif()    
+
+include(CPack)
