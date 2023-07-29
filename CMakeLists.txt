@@ -25,10 +25,12 @@ target_sources(ReneGate
     PRIVATE
         resource/renegate_editor.uidesc
 )
+
 target_link_libraries(ReneGate
     PRIVATE
         vstgui_support
 )
+
 smtg_target_add_plugin_resources(ReneGate 
     RESOURCES
         "resource/renegate_editor.uidesc"
