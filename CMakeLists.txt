@@ -25,12 +25,10 @@ target_sources(ReneGate
     PRIVATE
         resource/renegate_editor.uidesc
 )
-
 target_link_libraries(ReneGate
     PRIVATE
         vstgui_support
 )
-
 smtg_target_add_plugin_resources(ReneGate 
     RESOURCES
         "resource/renegate_editor.uidesc"
@@ -76,7 +74,7 @@ elseif(SMTG_WIN)
 	)
 endif()
 
-get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)    
+get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)   
 
 include(CPackComponent)
 set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
@@ -119,7 +117,7 @@ if(WIN32)
     set(CPACK_GENERATOR "INNOSETUP")
 	set(CPACK_INNOSETUP_SETUP_AppId "{{C6695644-EA21-4EF5-BB3D-94EE2343A47E}}")
 	set(CPACK_INNOSETUP_ALLOW_CUSTOM_DIRECTORY OFF)
-	set(CPACK_INNOSETUP_CODE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/UpdateReadyMemo.pas")
+	set(CPACK_INNOSETUP_CODE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/installer/UpdateReadyMemo.pas")
 else()
     # On Linux, just zip a tar.gz file which includes the plugin and the presets
 	install(
