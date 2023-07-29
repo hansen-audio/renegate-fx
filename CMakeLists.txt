@@ -81,6 +81,7 @@ get_target_property(PLUGIN_PACKAGE_PATH ReneGate SMTG_PLUGIN_PACKAGE_PATH)
 include(CPackComponent)
 set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
 set(CPACK_PACKAGE_VENDOR "Hansen Audio")
+set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/LICENSE)
 cpack_add_install_type(full DISPLAY_NAME "Full installation")
 
 if(WIN32)
@@ -101,8 +102,8 @@ if(WIN32)
 	)
 
 	install(
-		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
-		DESTINATION "${CPACK_PACKAGE_VENDOR}/VST3 Presets"
+		DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/content/VST3 Presets"
+		DESTINATION "."
 		COMPONENT presets
 	)
 	
@@ -120,22 +121,31 @@ if(WIN32)
 	set(CPACK_INNOSETUP_ALLOW_CUSTOM_DIRECTORY OFF)
 	set(CPACK_INNOSETUP_CODE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/UpdateReadyMemo.pas")
 else()
+    # On Linux, just zip a tar.gz file which includes the plugin and the presets
 	install(
 		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
 		DESTINATION "."
-		COMPONENT plugin
+		COMPONENT package
 	)
 
 	install(
-		DIRECTORY "${PLUGIN_PACKAGE_PATH}"
-		DESTINATION "VST3 Presets"
-		COMPONENT plugin
+		DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/content/VST3 Presets"
+		DESTINATION "."
+		COMPONENT package
 	)
+
+    install(
+        FILES "${CPACK_RESOURCE_FILE_LICENSE}"
+        DESTINATION "."
+        COMPONENT package
+    )
 	
-	set(CPACK_COMPONENTS_ALL plugin)
-    string(TOUPPER plugin plugin_UPPER)
-    set(CPACK_ARCHIVE_${plugin_UPPER}_FILE_NAME "${PROJECT_NAME}-${CMAKE_PROJECT_VERSION}-${CMAKE_SYSTEM_NAME}")
     set(CPACK_GENERATOR "TGZ")
+	set(CPACK_COMPONENTS_ALL package)
+
+    # tar.gz file name, e.g. myplugin-1.0.0-linux.tar.gz
+    string(TOUPPER package package_UPPER)
+    set(CPACK_ARCHIVE_${package_UPPER}_FILE_NAME "${PROJECT_NAME}-${CMAKE_PROJECT_VERSION}-${CMAKE_SYSTEM_NAME}")
 endif()    
 
 include(CPack)
