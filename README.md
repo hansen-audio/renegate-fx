@@ -15,7 +15,7 @@ This project's algorithms are written in Rust. In order to compile Rust code suc
 > Follow instructions from here: https://www.rust-lang.org/tools/install
 
 
-## Building the Plug-in
+## Build the Plug-in
 
 Execute the following commands on cli.
 
@@ -32,6 +32,12 @@ cmake --build .
 > macOS:```cmake -GXcode ../renegate-fx```
 
 > Windows 10: ```cmake -G"Visual Studio 16 2019" -A x64 ..\renegate-fx```
+
+## Build the installer
+
+```console
+cpack -C Release -G [INNOSETUP|TGZ|productbuild] .
+```
 
 ## Copyright & Trademark Acknowledgement 
 

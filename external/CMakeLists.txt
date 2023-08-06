@@ -5,3 +5,4 @@ if(NOT HA_GIT_REPOSITORY_URL)
 endif()
 
 add_subdirectory(plugin-base)
+add_subdirectory(vst3-cpack)

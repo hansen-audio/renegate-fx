@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14.0)
 
-project(renegate
+project("Renegate"
     VERSION 2022.09
     DESCRIPTION "VST 3 Trancegate Effect"
 )
@@ -74,4 +74,12 @@ elseif(SMTG_WIN)
 	)
 endif()
 
+get_target_property(PLUGIN_PACKAGE_PATH renegate SMTG_PLUGIN_PACKAGE_PATH)
+set(CPACK_PACKAGE_VENDOR "Hansen Audio")
+set(CPACK_RESOURCE_FILE_LICENSE ${PROJECT_SOURCE_DIR}/LICENSE)
+vst3_cpack_configure(
+    PLUGIN_PACKAGE_PATH ${PLUGIN_PACKAGE_PATH}
+    # PLUGIN_PRESETS_PATH "${PROJECT_SOURCE_DIR}/content/presets"
+)
 
+include(CPack)
