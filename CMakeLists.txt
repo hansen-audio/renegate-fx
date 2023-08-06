@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14.0)
 
-project("Renegate"
+project("ReneGate"
     VERSION 2022.09
     DESCRIPTION "VST 3 Trancegate Effect"
 )
@@ -25,10 +25,12 @@ target_sources(renegate
     PRIVATE
         resource/renegate_editor.uidesc
 )
+
 target_link_libraries(renegate
     PRIVATE
         vstgui_support
 )
+
 smtg_target_add_plugin_resources(renegate 
     RESOURCES
         "resource/renegate_editor.uidesc"
@@ -56,23 +58,17 @@ set_property(
 )
 
 if(SMTG_MAC)
-    smtg_set_bundle(renegate INFOPLIST 
-        "${CMAKE_CURRENT_LIST_DIR}/resource/Info.plist" 
+    smtg_target_set_bundle(renegate 
+        INFOPLIST "${CMAKE_CURRENT_LIST_DIR}/resource/Info.plist" 
         PREPROCESS
     )
 elseif(SMTG_WIN)
     target_sources(renegate PRIVATE 
         resource/win32resource.rc
     )
-    set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT renegate)
-	
-	set_target_properties(renegate PROPERTIES
-		VS_DEBUGGER_COMMAND
-			"$(ProgramW6432)/Steinberg/VST3PluginTestHost/VST3PluginTestHost.exe"
-		VS_DEBUGGER_COMMAND_ARGUMENTS
-			" --pluginfolder \"$(OutDir)\" "
-	)
 endif()
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT renegate)
 
 get_target_property(PLUGIN_PACKAGE_PATH renegate SMTG_PLUGIN_PACKAGE_PATH)
 set(CPACK_PACKAGE_VENDOR "Hansen Audio")
