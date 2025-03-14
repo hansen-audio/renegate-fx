@@ -8,7 +8,7 @@ A VST 3 trance gate plug-in, which is supposed to work in VST 3 Hosts like Stein
 
 > Disclaimer: Though fully functional this plug-in is more like a playground for trying out new things.
 
-![Renegate](./resource/EC8C4504FF35529F997829E60F5D8E18_snapshot.png)
+![Renegate](./resource/EC8C4504FF35529F997829E60F5D8E18_snapshot_2.0x.png)
 
 ## Getting Started
 
