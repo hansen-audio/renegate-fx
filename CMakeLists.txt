@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 
+set(CMAKE_OSX_DEPLOYMENT_TARGET 10.15 CACHE STRING "")
+
 project("ReneGate"
     VERSION 2022.09
     DESCRIPTION "VST 3 Trancegate Effect"
