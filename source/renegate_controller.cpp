@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------
 
 #include "renegate_controller.h"
-#include "ha/plugin_base/vst3/controller/generic_param.h"
+#include "hao/plugin_base/vst3/controller/generic_param.h"
 #include "public.sdk/source/vst/utility/stringconvert.h"
 #include "renegate_cids.h"
 #include "renegate_config.h"
@@ -11,7 +11,7 @@
 
 using namespace Steinberg;
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 // RenegateController Implementation
@@ -119,4 +119,4 @@ tresult PLUGIN_API RenegateController::getParamValueByString(
 }
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

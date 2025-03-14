@@ -4,8 +4,8 @@ include(FetchContent)
 
 FetchContent_Declare(
     plugin-base
-    GIT_REPOSITORY ${HA_GIT_REPOSITORY_URL}/hansen-audio/plugin-base.git
-    GIT_TAG origin/master
+    GIT_REPOSITORY https://github.com/hansen-audio/plugin-base.git
+    GIT_TAG main
 )
 
 FetchContent_MakeAvailable(plugin-base)

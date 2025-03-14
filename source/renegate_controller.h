@@ -6,7 +6,7 @@
 
 #include "public.sdk/source/vst/vsteditcontroller.h"
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 //  RenegateController
@@ -62,4 +62,4 @@ protected:
 };
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

@@ -2,9 +2,9 @@
 
 #pragma once
 
-#include "ha/plugin_base/core/types.h"
+#include "hao/plugin_base/core/types.h"
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 struct Config
@@ -21,4 +21,4 @@ struct Config
 };
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

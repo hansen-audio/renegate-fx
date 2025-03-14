@@ -10,13 +10,13 @@
 #include "pluginterfaces/vst/ivstparameterchanges.h"
 #include "pluginterfaces/vst/ivstprocesscontext.h"
 
-#include "ha/plugin_base/common/audio_module_visitor.h"
-#include "ha/plugin_base/vst3/component/audio_processing.h"
-#include "ha/plugin_base/vst3/component/audio_setup.h"
+#include "hao/plugin_base/common/audio_module_visitor.h"
+#include "hao/plugin_base/vst3/component/audio_processing.h"
+#include "hao/plugin_base/vst3/component/audio_setup.h"
 
 using namespace Steinberg;
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 // RenegateProcessor
@@ -130,4 +130,4 @@ tresult PLUGIN_API RenegateProcessor::getState(IBStream* state)
 }
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

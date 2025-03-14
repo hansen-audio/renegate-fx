@@ -7,7 +7,7 @@
 #include "pluginterfaces/base/funknown.h"
 #include "pluginterfaces/vst/vsttypes.h"
 
-namespace ha {
+namespace hao {
 //------------------------------------------------------------------------
 static const Steinberg::FUID
     kRenegateProcessorUID(0xEC8C4504, 0xFF35529F, 0x997829E6, 0x0F5D8E18);
@@ -17,4 +17,4 @@ static const Steinberg::FUID
 #define renegateVST3Category "Fx"
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

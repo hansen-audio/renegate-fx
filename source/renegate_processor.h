@@ -4,10 +4,10 @@
 
 #pragma once
 
-#include "ha/plugin_base/common/context.h"
+#include "hao/plugin_base/common/context.h"
 #include "public.sdk/source/vst/vstaudioeffect.h"
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 //  RenegateProcessor
@@ -63,4 +63,4 @@ protected:
 };
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

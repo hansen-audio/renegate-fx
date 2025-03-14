@@ -1,9 +1,9 @@
 // Copyright(c) 2021 Hansen Audio.
 
 #include "renegate_config.h"
-#include "ha/audio_modules/audio_modules.h"
+#include "hao/audio_modules/audio_modules.h"
 
-namespace ha {
+namespace hao {
 
 //------------------------------------------------------------------------
 
@@ -25,4 +25,4 @@ const plugin_base::entity_component_def Config::ENTITY_COMPONENT_DEF = {
 // clang-format on
 
 //------------------------------------------------------------------------
-} // namespace ha
+} // namespace hao

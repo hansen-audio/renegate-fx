@@ -12,7 +12,7 @@
 #define stringPluginName "ReneGate"
 
 using namespace Steinberg::Vst;
-using namespace ha;
+using namespace hao;
 
 //------------------------------------------------------------------------
 //  VST Plug-in Entry
