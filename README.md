@@ -6,7 +6,7 @@
 
 A VST 3 trance gate plug-in, which is supposed to work in VST 3 Hosts like Steinberg Cubase/Nuendo/WaveLab, Presonus Studio One, reaper etc.
 
-![Renegate](./content/web/renegate_screenshot.png)
+![Renegate](./resource/EC8C4504FF35529F997829E60F5D8E18_snapshot.png)
 
 ## Prerequisite
 
