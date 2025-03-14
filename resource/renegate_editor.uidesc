@@ -173,11 +173,11 @@
 				"width": "1"
 			},
 			"VST3Editor": {
-				"Path": "/Volumes/Sandboxes/Private/hansen-audio/renegate/renegate-fx/resource/renegate_editor.uidesc"
+				"Path": "/mnt/veracrypt2/Developer/github/hansen-audio/renegate-fx/renegate-fx/resource/renegate_editor.uidesc"
 			},
 			"UIGridController": {
-				"Grids": "1x 1,4x 4,5x 5,8x 8,10x 10,12x 12,15x 15",
-				"Size": "4, 4"
+				"Grids": "1x 1,2x 2,4x 4,5x 5,8x 8,10x 10,12x 12,15x 15",
+				"Size": "2, 2"
 			},
 			"UITemplateController": {
 				"SelectedTemplate": "view"
@@ -4982,7 +4982,7 @@
 																					"origin": "47, 0",
 																					"round-rect-radius": "6",
 																					"shadow-color": "~ RedCColor",
-																					"size": "14, 14",
+																					"size": "16, 14",
 																					"style-3D-in": "false",
 																					"style-3D-out": "false",
 																					"style-no-draw": "false",
@@ -5183,7 +5183,7 @@
 																					"origin": "47, 0",
 																					"round-rect-radius": "6",
 																					"shadow-color": "~ RedCColor",
-																					"size": "14, 14",
+																					"size": "16, 14",
 																					"style-3D-in": "false",
 																					"style-3D-out": "false",
 																					"style-no-draw": "false",
@@ -5443,7 +5443,7 @@
 																					"origin": "0, 0",
 																					"round-rect-radius": "2",
 																					"shadow-color": "~ RedCColor",
-																					"size": "48, 14",
+																					"size": "45, 14",
 																					"style-3D-in": "false",
 																					"style-3D-out": "false",
 																					"style-no-draw": "false",
@@ -5476,10 +5476,10 @@
 																					"min-value": "0",
 																					"mouse-enabled": "true",
 																					"opacity": "1",
-																					"origin": "50, 0",
+																					"origin": "47, 0",
 																					"round-rect-radius": "6",
 																					"shadow-color": "~ RedCColor",
-																					"size": "14, 14",
+																					"size": "16, 14",
 																					"style-3D-in": "false",
 																					"style-3D-out": "false",
 																					"style-no-draw": "false",
